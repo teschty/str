@@ -373,8 +373,6 @@ func ToArgv(s string) []string {
 
 	if currentState == InArg {
 		argv = append(argv, currentArg)
-	} else if currentState == InArgQuote {
-		panic("Starting quote has no ending quote.")
 	}
 
 	return argv
