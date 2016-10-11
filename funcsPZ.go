@@ -371,9 +371,9 @@ func ToArgv(s string) []string {
 		}
 	}
 
-	if currentState == InArg {
+	if currentState == InArg || currentState == InArgQuote {
 		argv = append(argv, currentArg)
-	}
+	} 
 
 	return argv
 }
